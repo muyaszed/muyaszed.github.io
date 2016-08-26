@@ -3,6 +3,9 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'home';
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700';
+@import 'https://fonts.googleapis.com/css?family=Cabin';
 
 @include foundation-global-styles;
 @include foundation-grid;

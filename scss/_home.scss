@@ -1,0 +1,74 @@
+#header-container {
+	background: #F0EDE4;
+	height: 100vh;
+
+	#header {
+		height: 100px;
+		background: #363437;
+		padding-left: 10%;
+		padding-right: 10%;
+		
+
+		
+			
+			#logo {
+				font-family: 'Droid Sans', sans-serif;
+				font-size: 1.8em;
+				font-weight: 700;
+				color: #fff;
+				letter-spacing: -2px;
+				padding-top: 15px;
+
+				.title {
+					font-size: 0.7em;
+					font-family: 'Cabin', sans-serif;
+					position: relative;
+					top: -18px;
+					font-weight: 400;
+				}
+			}
+
+			#menu {
+				padding-top: 25px;
+
+				a {
+					font-size: 1.2em;
+					color: #fff;
+					font-family: 'Cabin', sans-serif;
+					display:inline-block;
+  					position:relative;
+				}
+
+				a::after {
+					// display: none;
+					opacity: 0;
+					content:'';
+					  height:2px;
+					  width:20%;
+					  background:#f24432;
+					  position:absolute;
+					  left:40%;
+					  bottom:-5px;
+					  transition: all 0.4s ;
+
+				}
+
+				a:hover{
+					color: #635D5D;
+					
+				}
+
+				a:hover:after {
+					// display: block;
+					opacity: 1;
+					width: 80%;
+					left:15%;
+
+				}
+				
+
+
+			}
+		
+	}
+}
