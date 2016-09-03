@@ -108,6 +108,112 @@
 	}
 }
 
+#portfolio {
+	
+	background: #D1C0B8;
+	min-height: 450px;
+	padding: 10%;
+
+	h1,h2,h2,h4,h5 {
+		font-family: 'Droid Sans', sans-serif;
+	}
+	
+	a {
+			display: block;
+			margin: 0;
+			padding: 10px;
+		}
+	a:hover {
+		opacity: 0.5;
+	}
+
+
+	.full-stack {
+		.one {
+			background-image: url(../images/make-it-short.png);
+			background-size: cover;
+		}
+
+		.two {
+			background-image: url(../images/pairvnv.png);
+			background-size: cover;
+		}
+
+		.three {
+			background-image: url(../images/kfeed.png);
+			background-size: cover;
+		}
+
+
+	}
+
+	.front-end {
+		.one {
+			background-image: url(../images/design.png);
+			background-size: cover;
+		}
+		.two {
+			background-image: url(../images/nutri.png);
+			background-size: cover;
+		}
+		.three {
+			background-image: url(../images/pumpen.png);
+			background-size: cover;
+		}
+		.four {
+			background-image: url(../images/anan.png);
+			background-size: cover;
+		}
+		.five {
+			background-image: url(../images/maju.png);
+			background-size: cover;		
+		}
+		.six {
+			background-image: url(../images/paramed.png);
+			background-size: cover;
+		}
+		.seven {
+			background-image: url(../images/calculator.png);
+			background-size: cover;
+		}
+		.eight {
+			background-image: url(../images/podomoro.png);
+			background-size: cover;
+		}
+		.nine {
+			background-image: url(../images/quote.png);
+			background-size: cover;
+		}
+		.ten {
+			background-image: url(../images/weather.png);
+			background-size: cover;
+		}
+	}
+
+	.game-dev {
+		.one {
+			background-image: url(../images/ping-pong.png);
+			background-size: cover;
+		}
+	}
+	.stack {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		background: #000;
+
+
+	}
+}
+
+.fullstack-reveal {
+	// @extend #portfolio;
+	@extend #portfolio;
+	background: #363437!important;
+	color: #F0EDE4;
+	border-radius: 10px!important;
+}
+
 #about {
 	background: #907971;
 	min-height: 450px;
@@ -124,7 +230,7 @@
 
 	#profile-text-wrap {
 		position: relative;
-		top: -180px;
+		top: -170px;
 	}
 
 	.left {
@@ -139,7 +245,13 @@
 	.left, .right {
 		width: 50%;
 		font-size: 1.4em;
-			font-family: 'Cabin', sans-serif;
+		font-family: 'Cabin', sans-serif;
+
+		a {
+			color: inherit; 
+			text-decoration: underline;
+		}
+
 	}
 
 	.left:before, .right:before {

@@ -13,14 +13,14 @@
           <div class="row">
             <div id="logo" class="column small-4">
               YAZED JAMAL <br>
-              <span class="title">Full-stack Web Developer</span>
+              <span class="title">full-stack web developer</span>
             </div> <!-- end of logo -->
             <div id="menu" class="small-8 column">
               
-              <ul class="menu align-right">
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">PORTFOLIO</a></li>
-                <li><a href="">BLOG</a></li>
+              <ul class="menu align-right" data-magellan>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="https://medium.com/@yazed.jamal" target="blank">BLOG</a></li>
               </ul>
             </div> <!-- end of menu -->
           </div>
@@ -35,7 +35,117 @@
 
     </div> <!-- end of header container -->
 
-    <div id="about" class="row expanded">
+    <div id="portfolio" class="row expanded" data-magellan-target="portfolio">
+
+      <div class="small-12 column fullstack-title">
+        <h2>Full-Stack Development project</h2>
+      </div>
+      <div class="small-12 column">
+        <div class="row">
+          <ul class="full-stack menu">
+            <li><a data-toggle="open-one"><div class="stack one"></div> </a></li>
+            <div class="reveal fullstack-reveal" id="open-one" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            
+              <div class="row full-stack">
+                <div class="stack one column small-4"></div>
+                <div class="small-8 column">
+                  <p>Url Shortner clone using Sinatra for back-end and pure HTML, CSS and JQuery for frontend</p>
+                  <p><ul class="menu">
+                    <li><a href="http://makeitshort.heroku.com">DEMO</a></li>
+                    <li><a href="https://github.com/muyaszed/url_shortener">Github</a></li>
+                  </ul></p>
+                </div>
+              </div>
+              
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <li><a data-toggle="open-two"><div class="stack two"></div> </a></li>
+             <div class="reveal fullstack-reveal" id="open-two" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            
+              <div class="row full-stack">
+                <div class="stack two column small-4"></div>
+                <div class="small-8 column">
+                  <p>PairVnv(AirBnB clobe) which is build using Ruby on Rails and Bootstrap as the front-end. This web app include several features such as User management, amazon file storage, online payment system etc</p>
+                  <p><ul class="menu">
+                    <li><a href="http://pairvnv.heroku.com">DEMO</a></li>
+                    <li><a href="https://github.com/muyaszed/mypairbnb">Github</a></li>
+                  </ul></p>
+                </div>
+              </div>
+              
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <li><a data-toggle="open-three"><div class="stack three"></div> </a></li>
+            <div class="reveal fullstack-reveal" id="open-three" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+            
+              <div class="row full-stack">
+                <div class="stack three column small-4"></div>
+                <div class="small-8 column">
+                  <p>KFeed is a social enterprise platform where people can provide food for the needy. It is build using Ruby on Rails. This is a collaboration project.</p>
+                  <p><ul class="menu">
+                    <li><a href="http://kfeed.heroku.com">DEMO</a></li>
+                    <li><a href="https://gitlab.com/team-kfeed/kfeedapp">Github</a></li>
+                  </ul></p>
+                </div>
+              </div>
+
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="small-12 column fullstack-title">
+        <h2>Front-end Development project</h2>
+      </div>
+      <div class="small-12 column">
+        <div class="row">
+          <ul class="front-end menu">
+            <li><a href="#"><div class="stack one"></div></a></li>
+            <li><a href="#"><div class="stack two"></div></a></li>
+            <li><a href="#"><div class="stack three"></div></a></li>
+             <li><a href="#"><div class="stack four"></div></a></li>
+            <li><a href="#"><div class="stack five"></div></a></li>
+            <li><a href="#"><div class="stack six"></div></a></li>
+
+          </ul>
+
+        </div>
+        <div class="row">
+          <ul class=" front-end menu">
+            <li><a href="#"><div class="stack seven"></div></a></li>
+            <li><a href="#"><div class="stack eight"></div></a></li>
+            <li><a href="#"><div class="stack nine"></div></a></li>
+             <li><a href="#"><div class="stack ten"></div></a></li>
+            
+            
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="small-12 column fullstack-title">
+        <h2>Game Development project</h2>
+      </div>
+      <div class="small-12 column">
+        <div class="row">
+          <ul class="game-dev menu">
+           <li><a href="#"><div class="stack one"></div></a></li>
+            
+          </ul>
+
+        </div>
+      </div>
+      
+    </div> <!-- end of portfolio -->
+
+    <div id="about" class="row expanded" data-magellan-target="about">
       <div class="column small-12 text-center">
         <div id="profile-pic"></div>
       </div>
@@ -47,7 +157,7 @@
 
         </div>
         <div class="right">
-          I am fan of games and animation. I love to cook, and my dream is to create something which is related to food, gaming and websites. Living in Sheffield, UK and looking to secure an entry position in front end or full-stack web development and to utilise my experiences where ever applicable.
+          I am fan of technology, games and animation. I love to cook, and my dream is to create something which is related to food, gaming and websites. Living in Sheffield, UK and looking to secure an entry position in front end or full-stack web development and to utilise my experiences where ever applicable.
         </div>  
         
       </div>
