@@ -1,0 +1,3 @@
+[submodule "another-pomodoro"]
+	path = another-pomodoro
+	url = https://github.com/muyaszed/another-pomodoro.git
