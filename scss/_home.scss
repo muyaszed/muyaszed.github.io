@@ -206,13 +206,14 @@
 	}
 }
 
-.fullstack-reveal {
+.fullstack-reveal, .frontend-reveal {
 	// @extend #portfolio;
 	@extend #portfolio;
 	background: #363437!important;
 	color: #F0EDE4;
 	border-radius: 10px!important;
 }
+
 
 #about {
 	background: #907971;
