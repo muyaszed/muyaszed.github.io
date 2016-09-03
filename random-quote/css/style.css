@@ -1,0 +1,32 @@
+body {
+  background: #ff6347;
+}
+
+.logo {
+  font-size: 0.8em;
+  position: relative;
+  bottom: 15px;
+  right: 10px
+}
+
+.button {
+  margin-bottom: 50px;
+}
+
+#getQ {
+  width: 200px;
+}
+
+#response {
+  
+  min-height: 200px;
+  padding: 20px 20px 20px 20px;
+}
+.my-quote {
+  font-family: 'Playball', cursive;
+  font-size: 1.5em;
+}
+
+.author {
+  margin-top: 10%;
+}

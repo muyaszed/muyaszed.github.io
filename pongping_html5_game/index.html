@@ -1,0 +1,331 @@
+<style>
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#playerScore, #computerScore {
+  font-size: 80px;
+}
+
+#start {
+  width: 200px;
+  height: 100px;
+  font-size: 40px;
+  
+}
+
+#name {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.username {
+  margin-top: 200px;
+}
+
+#gameCanvas {
+  margin-top: -180px;
+}
+
+#comName {
+  display: none;
+}
+
+
+
+
+</style>
+
+<html>
+
+<head>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-xs-1">
+    <div id="playerName"></div>
+    <div id="playerScore" class="text-center">0</div>
+  </div>
+  <div class="col-xs-10 text-center">
+
+    <form id="myform">
+      <div class="username form-group text-center">
+        <label for="name">Your name</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      
+    </form>
+    
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+  
+      <button id="start">Start</button>
+     
+  </div>
+  <div class="col-xs-1">
+  <div id="comName">Computer</div>
+    <div id="computerScore" class="text-center">0</div>
+  </div>
+</div>
+
+
+  
+
+</div>
+
+
+  
+
+</body>
+
+
+</html>
+
+
+<script>
+
+document.getElementById('gameCanvas').style.display = 'none';
+
+var canvas;
+var canvasContext;
+var ballX = 50;
+var ballY = 50;
+var speedY = 5;
+var speedX =15;
+var paddleY = 250;
+var paddleComY = 280;
+var paddleHeight = 100;
+var player1Score = 0;
+var player2Score = 0;
+var winPoint = 5;
+var gameOver = false;
+var playerName ;
+var run;
+
+function calculateMousePos(evt){
+  var rect = canvas.getBoundingClientRect();
+  var root = document.documentElement;
+  var mouseX = evt.clientX - rect.left - root.scrollLeft;
+  var mouseY = evt.clientY - rect.top - root.scrollTop;
+  return {
+    x:mouseX,
+    y:mouseY
+  };
+};
+
+document.getElementById("start").addEventListener("click", gameLoop);
+function gameLoop() {
+  playerName = document.getElementById('name').value;
+  gameOver = false;
+  document.getElementById('gameCanvas').style.display = 'inline-block';
+  document.getElementById('start').style.display = 'none';
+  canvas = document.getElementById('gameCanvas');
+  canvasContext = canvas.getContext('2d');
+  var framePerSecond = 30;
+  run = setInterval(runGame, 1000/framePerSecond);
+
+  canvas.addEventListener('mousemove', function(evt){
+
+      var mousePos = calculateMousePos(evt);
+      paddleY = mousePos.y - paddleHeight/2;
+  });
+
+};
+
+function runGame() {
+  console.log(playerName);
+  // console.log(speedY + "" + speedX);
+  drawEverything();
+  moveEverything();
+
+}
+
+function drawEverything() {
+
+  if(gameOver){
+    
+    canvasContext.fillStyle = 'black';
+    document.getElementById('gameCanvas').style.display = 'none';
+    document.getElementById('start').style.display = 'inline-block';
+    // canvasContext.fillRect(0,0,canvas.width,canvas.height);
+    clearInterval(run);
+    return;
+
+  }
+  
+  canvasContext.fillStyle = 'black';
+  canvasContext.fillRect(0,0,canvas.width,canvas.height);
+  canvasContext.fillStyle = 'red';
+  canvasContext.fillRect(ballX,ballY,20,20);
+  canvasContext.fillStyle = 'yellow';
+  canvasContext.fillRect(10,paddleY,20,paddleHeight);
+  canvasContext.fillStyle = 'yellow';
+  canvasContext.fillRect(canvas.width-30,paddleComY,20,paddleHeight);
+  // canvasContext.fillText(player1Score,100,100);
+  // canvasContext.fillText(player2Score,canvas.width-100,100);
+   document.getElementById('comName').style.display = 'block';
+  document.getElementById('playerName').innerHTML = playerName;
+   document.getElementById('playerName').style.display = 'block';
+ 
+
+
+};
+
+function comMovement() {
+  //paddleComY = ballY + 20;
+  var paddleComYCenter = paddleComY+(paddleComY/2);
+  var ballYCenter = ballY+(ballY/2);
+  if(paddleComYCenter < ballYCenter -25) {
+    paddleComY += 10;
+  }else if(paddleComYCenter > ballYCenter+25){
+    paddleComY -= 10;
+  }
+
+
+};
+
+function ballReset(){
+    if(player1Score>=winPoint) {
+      canvasContext.fillStyle = 'yellow';
+      canvasContext.fillText("Player 1 Win",canvas.height/2,canvas.width/2+50);
+      gameReset();
+    }else if(player2Score>=winPoint) {
+      canvasContext.fillStyle = 'yellow';
+      canvasContext.fillText("Computer Win",100,100);
+     gameReset();
+    }
+
+    speedX = -speedX;
+    ballX = canvas.width/2;
+    ballY = canvas.height/2;
+
+};
+
+function gameReset() {
+
+      document.getElementById('playerScore').innerHTML = 0;
+      document.getElementById('computerScore').innerHTML = 0;
+      document.getElementById('playerName').style.display = 'none';
+  document.getElementById('comName').style.display = 'none';
+      player1Score = 0;
+      player2Score = 0;
+      gameOver = true;
+      var speedY = 5;
+      var speedX =15;
+      var ballX = 50;
+      var ballY = 50;
+}
+
+
+function moveEverything() {
+
+  if(gameOver){
+    return;
+  }
+  comMovement();
+
+  ballY += speedY
+  ballX += speedX
+  //console.log(paddleY)
+
+
+
+  if(ballX > canvas.width-41){
+    if(ballX > canvas.width-21){
+      player1Score++;
+      document.getElementById('playerScore').innerHTML = player1Score;
+      ballReset();
+
+
+    }else if(ballY > paddleComY && ballY < paddleComY+paddleHeight) {
+      speedX = -speedX;
+
+      var deltaY = ballY - (paddleComY+paddleHeight/2);
+
+      speedY = deltaY*0.3;
+
+    }
+
+  }else if (ballX < 29){
+    if(ballX < 1) {
+
+      player2Score++;
+      document.getElementById('computerScore').innerHTML = player2Score;
+      ballReset();
+    }else if(ballY > paddleY && ballY < paddleY+paddleHeight) {
+      speedX = -speedX;
+      var deltaY = ballY - (paddleY+paddleHeight/2);
+
+      speedY = deltaY*0.3;
+    }
+
+  }
+  if(ballY > 574){
+    speedY = -speedY;
+  }else if(ballY < 1){
+    speedY = -speedY;
+  }
+
+}
+
+
+</script>
