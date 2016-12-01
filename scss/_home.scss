@@ -148,45 +148,54 @@
 	}
 
 	.front-end {
+		.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+			background-size: cover;
+
+		}
+		
 		.one {
 			background-image: url(../images/design.png);
-			background-size: cover;
+			
 		}
 		.two {
 			background-image: url(../images/nutri.png);
-			background-size: cover;
+			
 		}
 		.three {
 			background-image: url(../images/pumpen.png);
-			background-size: cover;
+			
 		}
 		.four {
 			background-image: url(../images/anan.png);
-			background-size: cover;
+			
 		}
 		.five {
 			background-image: url(../images/maju.png);
-			background-size: cover;		
+					
 		}
 		.six {
 			background-image: url(../images/paramed.png);
-			background-size: cover;
+			
 		}
 		.seven {
 			background-image: url(../images/calculator.png);
-			background-size: cover;
+			
 		}
 		.eight {
 			background-image: url(../images/podomoro.png);
-			background-size: cover;
+			
 		}
 		.nine {
 			background-image: url(../images/quote.png);
-			background-size: cover;
+			
 		}
 		.ten {
 			background-image: url(../images/weather.png);
-			background-size: cover;
+			
+		}
+		.eleven {
+			background-image: url(../images/wiki.png);
+			
 		}
 	}
 
