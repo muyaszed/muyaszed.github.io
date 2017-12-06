@@ -447,11 +447,11 @@ body, h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://muyaszed.github.io/myHomePage/wp-content/themes/myHome/images/profile.jpg");
+  background-image: url("https://muyaszed.github.io/wp-content/themes/myHome/images/profile.jpg");
   min-height: 100%; }
 
 #char {
-  background-image: url("https://muyaszed.github.io/myHomePage/wp-content/themes/myHome/images/character.png");
+  background-image: url("https://muyaszed.github.io/wp-content/themes/myHome/images/character.png");
   background-repeat: no-repeat;
   background-size: 70%;
   height: 520px;
@@ -466,7 +466,7 @@ body, h1, h2, h3, h4, h5, h6 {
   opacity: 1; }
 
 #char1 {
-  background-image: url("https://muyaszed.github.io/myHomePage/wp-content/themes/myHome/images/character.png");
+  background-image: url("https://muyaszed.github.io/wp-content/themes/myHome/images/character.png");
   background-repeat: no-repeat;
   background-size: 70%;
   height: 520px;
