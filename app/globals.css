@@ -1,0 +1,56 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./about/about.css";
+@import "./about/portfolio/portfolio.css";
+@import "./about/contact/contact.css";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    font-family: "Pixelify Sans";
+    color: var(--background);
+    margin: 0;
+}
+
+.text-container {
+    .cp-text-input-container,
+    .cp-text-input,
+    .cp-text-area-wrapper,
+    div:has(.cp-text-area-wrapper),
+    .cp-text-area {
+        width: 100%;
+    }
+
+    .cp-text-area {
+        height: 342px;
+    }
+}
+
+#cp-input-text-skills {
+    cursor: pointer;
+}
+
+#cp-input-text-score {
+    height: 140px;
+    text-align: center;
+    font-size: 34px;
+}

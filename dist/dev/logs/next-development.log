@@ -1,0 +1,107 @@
+[00:00:01.476] Server  LOG      ✓ Ready in 1263ms
+[00:00:02.749] Server  LOG     /about/social
+[00:00:04.195] Browser LOG     /about/social
+[00:00:04.195] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:04.195] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[00:00:04.195] Browser LOG     /about/social
+[00:00:04.195] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:04.195] Browser LOG     /about/social
+[00:00:04.195] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:04.195] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/about/social" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="bg-[url(./assets/images/bg.jpg)] bg-contain"
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:00:04.316] Browser LOG     /about/social
+[00:00:04.316] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:04.542] Browser LOG     /about/social
+[00:00:04.542] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:04.542] Browser LOG     /about/social
+[00:00:04.542] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.357] Browser LOG     /about/social
+[00:00:05.357] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.357] Browser LOG     /about/social
+[00:00:05.357] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.357] Browser LOG     /about/social
+[00:00:05.357] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.357] Browser LOG     /about/social
+[00:00:05.357] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.357] Browser LOG     /about/social
+[00:00:05.357] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.358] Browser LOG     /about/social
+[00:00:05.358] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:05.358] Browser LOG     /about/social
+[00:00:05.358] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:10.484] Browser LOG     /about/social
+[00:00:10.484] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:11.699] Browser LOG     /about/social
+[00:00:11.699] Browser LOG     [2;38;2;124;124;124m%s[0m /about/social
+[00:00:11.699] Browser LOG     /
+[00:00:11.699] Browser LOG     [2;38;2;124;124;124m%s[0m /
+[00:00:12.051] Server  WARN     ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:00:13.777] Browser WARN    Image with src "/_next/static/media/character.624dcf42.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:13.777] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="bg-[url(./assets/images/bg.jpg)] bg-contain"
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:01:09.899] Server  ERROR    ⨯ SyntaxError: Unexpected end of JSON input
