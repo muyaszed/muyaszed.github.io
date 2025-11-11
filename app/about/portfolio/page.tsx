@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { Button, Select, Box } from "pixelartui-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { SideBarContext } from "../AboutContext";
 interface MenuItem {
     name: string;
     link: string;
@@ -101,10 +102,13 @@ export default function Portfolio() {
     const [selectedMenu, setSelectedMenu] = useState<MenuItem | undefined>(
         menu[0]
     );
+    const dispatch = useContext(SideBarContext);
     const handleCategoryChanged = (
         e: React.MouseEvent<HTMLDivElement, MouseEvent>
     ) => {
-        console.log(e.currentTarget.dataset.value);
+        if (dispatch) {
+            dispatch({ type: "INCREASE" });
+        }
         setSelectedCat(e.currentTarget.dataset.value!);
     };
     return (
@@ -141,6 +145,9 @@ export default function Portfolio() {
                                 buttonSize={"large"}
                                 buttonType={"main"}
                                 onClick={() => {
+                                    if (dispatch) {
+                                        dispatch({ type: "INCREASE" });
+                                    }
                                     setSelectedMenu(item);
                                 }}
                                 backgroundColor={

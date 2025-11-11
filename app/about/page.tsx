@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Button } from "pixelartui-react";
 import { useContext, useEffect, useState } from "react";
-import { SideBarContext } from "./layout";
+import { SideBarContext } from "./AboutContext";
 
 const boxes: {
     text?: string;

@@ -1,40 +1,41 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import { Button, Modal, TextInput } from "pixelartui-react";
-import { createContext, useReducer, useState, Dispatch } from "react";
+import { useReducer, useState } from "react";
+import { reducer, SideBarContext } from "./AboutContext";
 
-export const SideBarContext = createContext<Dispatch<ScoreAction> | null>(null);
+// export const SideBarContext = createContext<Dispatch<ScoreAction> | null>(null);
 
-interface ScoreActionIncrease {
-    type: "INCREASE";
-}
+// interface ScoreActionIncrease {
+//     type: "INCREASE";
+// }
 
-interface ScoreActionDecrease {
-    type: "DECREASE";
-}
+// interface ScoreActionDecrease {
+//     type: "DECREASE";
+// }
 
-type ScoreAction = ScoreActionIncrease | ScoreActionDecrease;
+// type ScoreAction = ScoreActionIncrease | ScoreActionDecrease;
 
-interface ScoreState {
-    score: number;
-}
+// interface ScoreState {
+//     score: number;
+// }
 
-function reducer(state: ScoreState, action: ScoreAction) {
-    switch (action.type) {
-        case "INCREASE":
-            return {
-                ...state,
-                score: state.score + 10,
-            };
-        case "DECREASE":
-            return {
-                ...state,
-                score: state.score - 10,
-            };
-        default:
-            return state;
-    }
-}
+// function reducer(state: ScoreState, action: ScoreAction) {
+//     switch (action.type) {
+//         case "INCREASE":
+//             return {
+//                 ...state,
+//                 score: state.score + 10,
+//             };
+//         case "DECREASE":
+//             return {
+//                 ...state,
+//                 score: state.score - 10,
+//             };
+//         default:
+//             return state;
+//     }
+// }
 
 export default function Layout({
     children,
