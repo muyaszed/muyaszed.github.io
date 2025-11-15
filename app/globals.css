@@ -1,7 +1,5 @@
-@layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss";
 
-@import "tailwindcss/utilities.css" layer(utilities);
 @import "./about/about.css";
 @import "./about/portfolio/portfolio.css";
 @import "./about/contact/contact.css";
@@ -31,7 +29,7 @@ body {
     margin: 0;
 }
 
-.text-container {
+/* .text-container {
     .cp-text-input-container,
     .cp-text-input,
     .cp-text-area-wrapper,
@@ -53,4 +51,4 @@ body {
     height: 140px;
     text-align: center;
     font-size: 34px;
-}
+} */

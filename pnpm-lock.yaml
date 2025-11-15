@@ -15,8 +15,8 @@ importers:
         specifier: 16.0.1
         version: 16.0.1(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       pixelartui-react:
-        specifier: ^0.4.29
-        version: 0.4.29(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^0.4.36
+        version: 0.4.36(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -1594,8 +1594,8 @@ packages:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
-  pixelartui-react@0.4.29:
-    resolution: {integrity: sha512-t9jiM8Lf0u3tp+eFNYM322onwmsESxdda2djOhJgHtFVB3f+cjUFyz0p78aSUYUXftnDo9kB/rfrPUubde02cg==}
+  pixelartui-react@0.4.36:
+    resolution: {integrity: sha512-gvEynsabiRvgYok3Jacm+lKXDKtMobACWNPoVU2UZUJhFyPO0gL6iVLrLM+F+vaSq2xO4YHwnFG4u/UZ8pUtlw==}
     peerDependencies:
       react: ^19.1.0
       react-dom: ^19.1.0
@@ -3581,7 +3581,7 @@ snapshots:
 
   picomatch@4.0.3: {}
 
-  pixelartui-react@0.4.29(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  pixelartui-react@0.4.36(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
