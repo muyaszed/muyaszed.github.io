@@ -5,13 +5,14 @@
     cursor: crosshair;
     font-size: 12px;
     font-family: inherit;
+
+    @media (width >= 40rem) {
+        font-size: 24px;
+    }
 }
 
 .about-grid {
-    .cp-pixel-box-wrapper {
-        min-width: 80px;
-        height: 80px;
-
+    .cp-button-box-wrapper {
         @media (width >= 40rem) {
             min-width: 130px;
             height: 130px;
@@ -20,6 +21,12 @@
 }
 
 .exit-modal {
-    width: 300px;
-    height: 300px;
+    @media (width >= 40rem) {
+        width: 800px;
+    }
+}
+
+#cp-input-text-score {
+    text-align: center;
+    font-size: 24px;
 }

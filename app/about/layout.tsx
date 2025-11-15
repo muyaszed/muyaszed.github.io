@@ -4,39 +4,6 @@ import { Button, Modal, TextInput } from "pixelartui-react";
 import { useReducer, useState } from "react";
 import { reducer, SideBarContext } from "./AboutContext";
 
-// export const SideBarContext = createContext<Dispatch<ScoreAction> | null>(null);
-
-// interface ScoreActionIncrease {
-//     type: "INCREASE";
-// }
-
-// interface ScoreActionDecrease {
-//     type: "DECREASE";
-// }
-
-// type ScoreAction = ScoreActionIncrease | ScoreActionDecrease;
-
-// interface ScoreState {
-//     score: number;
-// }
-
-// function reducer(state: ScoreState, action: ScoreAction) {
-//     switch (action.type) {
-//         case "INCREASE":
-//             return {
-//                 ...state,
-//                 score: state.score + 10,
-//             };
-//         case "DECREASE":
-//             return {
-//                 ...state,
-//                 score: state.score - 10,
-//             };
-//         default:
-//             return state;
-//     }
-// }
-
 export default function Layout({
     children,
 }: Readonly<{
@@ -51,12 +18,14 @@ export default function Layout({
     return (
         <SideBarContext value={dispatch}>
             <div className="home-layout flex flex-col sm:flex-row h-screen">
-                <div className="navbar-container justify-center flex sm:flex-col sm:h-full sm:w-1/5 sm:justify-start items-center w-full h-1/4 gap-2">
+                <div className="navbar-container justify-center flex flex-col items-center sm:justify-start">
                     <TextInput
                         textLabel="SCORE"
                         inputName={"score"}
                         type={"main"}
                         value={score.toString()}
+                        width={"150px"}
+                        height="150px"
                     />
                     <div className="flex justify-center items-center flex-col">
                         {path !== "/about" && (
@@ -69,6 +38,7 @@ export default function Layout({
                                     router.replace("/about");
                                 }}
                                 round
+                                fullwidth
                             />
                         )}
                         <Button
@@ -81,6 +51,7 @@ export default function Layout({
                             round
                         />
                         <Modal
+                            width="100%"
                             className="exit-modal"
                             name="exit-modal"
                             open={openModal}

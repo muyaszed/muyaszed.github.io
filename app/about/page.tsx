@@ -67,6 +67,8 @@ export default function Home() {
                                 text={item ? item.text! : ""}
                                 buttonSize={"medium"}
                                 buttonType={"main"}
+                                width="80px"
+                                height="80px"
                                 onClick={(event) => {
                                     if (event.currentTarget.innerText === "") {
                                         if (dispatch) {

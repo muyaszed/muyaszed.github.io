@@ -1,21 +1,18 @@
 .portfolio-page {
-    .category-menu-button {
+    .cp-select-box-wrapper,
+    .cp-pixel-box-wrapper {
         width: 100%;
         @media (width >= 40rem) {
             width: 150px;
-        }
-        .cp-pixel-box-wrapper {
-            width: 100%;
         }
     }
 
-    .category-menu-select {
-        width: 100%;
-        @media (width >= 40rem) {
-            width: 150px;
-        }
-        .cp-pixel-box-content-inner {
-            width: 100%;
+    .menu {
+        .cp-button-box-wrapper {
+            @media (width >= 40rem) {
+                width: 150px;
+                height: 150px;
+            }
         }
     }
 

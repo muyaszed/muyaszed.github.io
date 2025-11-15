@@ -28,27 +28,3 @@ body {
     color: var(--background);
     margin: 0;
 }
-
-/* .text-container {
-    .cp-text-input-container,
-    .cp-text-input,
-    .cp-text-area-wrapper,
-    div:has(.cp-text-area-wrapper),
-    .cp-text-area {
-        width: 100%;
-    }
-
-    .cp-text-area {
-        height: 342px;
-    }
-}
-
-#cp-input-text-skills {
-    cursor: pointer;
-}
-
-#cp-input-text-score {
-    height: 140px;
-    text-align: center;
-    font-size: 34px;
-} */

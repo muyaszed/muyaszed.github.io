@@ -12,14 +12,9 @@ import { MouseEvent } from "react";
 export default function Social() {
     return (
         <div className="flex flex-col justify-between h-screen sm:w-full">
-            <div className="contact-page flex items-center justify-center flex-col sm:w-full mt-20 sm:h-full sm:mt-0">
+            <div className="contact-page flex text-[24px] gap-5 items-center justify-center flex-col sm:w-full mt-20 sm:h-full sm:mt-0">
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Image
-                        alt="linkedin-icon"
-                        src={linkedinIcon}
-                        width={50}
-                        height={50}
-                    />
+                    <i className="hn hn-linkedin text-[34px] text-blue-700"></i>
                     <Link
                         className="text-white no-underline"
                         href="https://www.linkedin.com/in/yazedjamal/"
@@ -29,11 +24,7 @@ export default function Social() {
                     </Link>
                 </div>
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Box>
-                        <div className="text-white w-7 h-7 flex justify-center items-center">
-                            X
-                        </div>
-                    </Box>
+                    <i className="hn hn-x text-[34px]"></i>
 
                     <Link
                         className="text-white no-underline"
@@ -44,12 +35,7 @@ export default function Social() {
                     </Link>
                 </div>
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Image
-                        alt="insta-icon"
-                        src={instaIcon}
-                        width={50}
-                        height={50}
-                    />
+                    <i className="hn hn-instagram text-[34px] text-red-400"></i>
 
                     <Link
                         className="text-white no-underline"
@@ -60,7 +46,7 @@ export default function Social() {
                     </Link>
                 </div>
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Image alt="fb-icon" src={fbIcon} width={50} height={50} />
+                    <i className="hn hn-facebook-square text-[34px] text-blue-900"></i>
 
                     <Link
                         className="text-white no-underline"
@@ -71,13 +57,22 @@ export default function Social() {
                     </Link>
                 </div>
             </div>
-            <a
-                className="text-white no-underline flex justify-center"
-                href="https://www.flaticon.com/free-icons/pixel"
-                title="pixel icons"
-            >
-                Pixel icons created by Freepik - Flaticon
-            </a>
+            <div className="flex justify-center">
+                Icons from{" "}
+                <a
+                    className="text-[#2FA1E1] px-2"
+                    href="https://pixeliconlibrary.com/"
+                >
+                    Pixel Icon Library
+                </a>
+                by
+                <a
+                    className="text-[#2FA1E1] px-2"
+                    href="https://hackernoon.com/"
+                >
+                    HackerNoon
+                </a>
+            </div>
         </div>
     );
 }

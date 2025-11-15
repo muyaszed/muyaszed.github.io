@@ -112,8 +112,16 @@ export default function Portfolio() {
         setSelectedCat(e.currentTarget.dataset.value!);
     };
     return (
-        <div className="portfolio-page flex items-center flex-col sm:w-full">
-            <div className="header flex flex-col items-center w-full">
+        <div className="portfolio-page flex items-center flex-col sm:w-full sm:gap-10">
+            <div className="header flex flex-col items-center w-full order-2 sm:gap-10">
+                <div className="flex justify-start gap-3 w-full">
+                    <div>
+                        <i className="hn hn-github text-[30px]"></i>
+                    </div>
+                    <a href="https://github.com/muyaszed" target="_blank">
+                        /muyaszed
+                    </a>
+                </div>
                 <div className="drop-down z-10 w-full">
                     <Select
                         className="category-menu-select"
@@ -134,16 +142,17 @@ export default function Portfolio() {
                         onChange={handleCategoryChanged}
                     />
                 </div>
-                <div className="menu flex items-center flex-col gap-2 w-full sm:flex-wrap sm:flex-row">
+                <div className="menu flex flex-col w-full gap-2 sm:flex-wrap sm:flex-row">
                     {menu
                         .filter((filterItem) => filterItem.type === selectedCat)
                         .map((item, index) => (
                             <Button
-                                className="category-menu-button"
+                                fullwidth
                                 key={index}
                                 text={item.name}
-                                buttonSize={"large"}
+                                buttonSize={"medium"}
                                 buttonType={"main"}
+                                height="60px"
                                 onClick={() => {
                                     if (dispatch) {
                                         dispatch({ type: "INCREASE" });
@@ -160,15 +169,15 @@ export default function Portfolio() {
                 </div>
             </div>
             {selectedMenu?.preview && (
-                <div className="hidden sm:block w-full h-200 bg-blue-500 mt-10 mb-10">
+                <div className="hidden sm:block w-full mt-10 sm:pr-10">
                     <iframe
-                        className="w-full h-full"
+                        className="w-full h-150"
                         src={selectedMenu?.link}
                     ></iframe>
                 </div>
             )}
-            <div className="preview w-full flex justify-center">
-                <Box className="category-desc-box">
+            <div className="preview w-full flex justify-center order-1 sm:pr-10 mt-10">
+                <Box className="category-desc-box" width="100%" height="200px">
                     <div className="bg-white text-color text-black p-2 w-full">
                         <div>{selectedMenu?.desc}</div>
                         <Link href={selectedMenu!.link} target="_blank">
