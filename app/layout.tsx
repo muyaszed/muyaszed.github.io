@@ -4,16 +4,6 @@ import "@fontsource/pixelify-sans";
 import "./globals.css";
 import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
     title: "Yazed Jamal Portfolio",
     description:
