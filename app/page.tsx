@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <div className="flex items-center gap-5 flex-col w-full sm:flex-row sm:justify-center">
-                <div className="relative">
+                <div className="relative pt-50 sm:pt-0">
                     <Image
                         width={173}
                         src={meImage}
@@ -23,8 +23,10 @@ export default function Home() {
                         backgroundColor="#ffffff"
                         noLabel
                         value="Player One"
+                        fullwidth
                     />
                     <TextArea
+                        fullwidth
                         inputName={"skills"}
                         type={"main"}
                         backgroundColor="#ffffff"
@@ -59,6 +61,7 @@ Jquery, PHP, SQL, C#
                     onClick={() => {}}
                     round
                     fullwidth
+                    buttonStyle="light"
                 />
             </Link>
         </div>

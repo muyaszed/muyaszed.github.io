@@ -9,23 +9,13 @@ import contactIcon from "../../assets/images/calendar-icon.png";
 export default function Contact() {
     return (
         <div className="flex flex-col justify-between h-screen sm:w-full">
-            <div className="contact-page flex items-center justify-center flex-col sm:w-full mt-20 sm:h-full sm:mt-0">
+            <div className="contact-page text-[24px] flex items-center justify-center flex-col sm:w-full mt-20 sm:h-full sm:mt-0 gap-5">
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Image
-                        alt="location-icon"
-                        src={locationIcon}
-                        width={50}
-                        height={50}
-                    />
+                    <i className="hn hn-location-pin text-[34px] text-red-300"></i>
                     <div>Diss, Norfolk</div>
                 </div>
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Image
-                        alt="mail-icon"
-                        src={maiIcon}
-                        width={50}
-                        height={50}
-                    />
+                    <i className="hn hn-envelope text-[34px] text-yellow-300"></i>
 
                     <Link
                         className="text-white no-underline"
@@ -35,12 +25,7 @@ export default function Contact() {
                     </Link>
                 </div>
                 <div className="button-group flex justify-center items-center gap-2">
-                    <Image
-                        alt="contact-icon"
-                        src={contactIcon}
-                        width={50}
-                        height={50}
-                    />
+                    <i className="hn hn-phone-ringing-high-solid text-[34px] text-orange-300"></i>
 
                     <Link
                         className="text-white no-underline"
@@ -51,13 +36,22 @@ export default function Contact() {
                     </Link>
                 </div>
             </div>
-            <a
-                className="text-white no-underline flex justify-center"
-                href="https://www.flaticon.com/free-icons/pixel"
-                title="pixel icons"
-            >
-                Pixel icons created by Freepik - Flaticon
-            </a>
+            <div className="flex justify-center">
+                Icons from{" "}
+                <a
+                    className="text-[#2FA1E1] px-2"
+                    href="https://pixeliconlibrary.com/"
+                >
+                    Pixel Icon Library
+                </a>
+                by
+                <a
+                    className="text-[#2FA1E1] px-2"
+                    href="https://hackernoon.com/"
+                >
+                    HackerNoon
+                </a>
+            </div>
         </div>
     );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@fontsource/pixelify-sans";
 import "./globals.css";
+import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
