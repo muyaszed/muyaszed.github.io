@@ -102,6 +102,13 @@ const menu: MenuItem[] = [
         type: "funStuff",
         preview: true,
     },
+    {
+        name: "Bouncy Ball",
+        link: "/bouncyBall/index.html",
+        desc: "A proof of concept showing the physics of a bouncy ball",
+        type: "funStuff",
+        preview: true,
+    },
 ];
 
 export default function Portfolio() {
