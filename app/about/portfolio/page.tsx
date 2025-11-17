@@ -33,10 +33,17 @@ const menu: MenuItem[] = [
         preview: true,
     },
     {
-        name: "Vibe coding",
+        name: "Automation Directory",
         link: "https://makeyourautomation.com",
         desc: "A website I build by vibe coding using cursor. It is a directory/marketplace to get and give automation flow.",
-        type: "openSource",
+        type: "vibeCoding",
+        preview: true,
+    },
+    {
+        name: "Startup Validator",
+        link: "https://startupideavalidator.online/",
+        desc: "A website I build by vibe coding using Rovo Dev. It is a validator tool to validate your startup idea with an optional AI detail analysis.",
+        type: "vibeCoding",
         preview: true,
     },
     {
