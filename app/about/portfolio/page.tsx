@@ -141,6 +141,10 @@ export default function Portfolio() {
                                 label: "Fun Stuff",
                                 value: "funStuff",
                             },
+                            {
+                                label: "Vibe Coding",
+                                value: "vibeCoding",
+                            },
                         ]}
                         selectLabel="Choose category"
                         selectName="category"
