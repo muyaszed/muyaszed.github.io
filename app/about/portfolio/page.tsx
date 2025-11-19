@@ -20,7 +20,7 @@ const menu: MenuItem[] = [
     },
     {
         name: "Pixelartui",
-        link: "https://github.com/Pixelartui",
+        link: "https://pixelartui.github.io",
         desc: "My own Open source work. Still in beta",
         type: "openSource",
         preview: false,
